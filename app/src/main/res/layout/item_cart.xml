@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/round_corner_button_2">
+
+    <ImageView
+        android:id="@+id/medicine_image"
+        android:layout_width="49dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/medicine_image_desc"
+        android:src="@drawable/medicine_2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:id="@+id/medicine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine Name"
+            android:textSize="16sp"
+            android:textColor="@color/bpblack"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/medicine_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/bpblack"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"/>
+</LinearLayout>

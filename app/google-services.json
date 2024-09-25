@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "281873772478",
+    "project_id": "glucoguide-database",
+    "storage_bucket": "glucoguide-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281873772478:android:0735d7f3242f9454f013ef",
+        "android_client_info": {
+          "package_name": "com.faltenreich.diaguard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281873772478-1r0suqkgi1vqdptjt8tc77dl1k2p7cnm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.faltenreich.diaguard",
+            "certificate_hash": "0c8d3d4ce65f2f5692b9431fead782194e460aba"
+          }
+        },
+        {
+          "client_id": "281873772478-0j0vketrren1revvfvbnfssh9rret2lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP4pi98MssJPxlREUi6JbJ2XXyAyf81no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281873772478-0j0vketrren1revvfvbnfssh9rret2lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281873772478:android:64db162b82503995f013ef",
+        "android_client_info": {
+          "package_name": "com.faltenreich.diaguard.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281873772478-0j0vketrren1revvfvbnfssh9rret2lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP4pi98MssJPxlREUi6JbJ2XXyAyf81no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281873772478-0j0vketrren1revvfvbnfssh9rret2lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/predction_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/predction_diabetic"
+    tools:context=".PredctionResult">
+
+
+    <ImageView
+        android:id="@+id/iconP"
+        android:layout_width="124dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/glucose" />
+
+
+    <TextView
+        android:id="@+id/resultP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/bpWhite"
+        android:fontFamily="@font/mouldy"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconP" />
+
+    <TextView
+        android:id="@+id/ageR"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:drawableLeft="@drawable/ic_account"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultP" />
+
+    <TextView
+        android:id="@+id/bmiR"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/man1"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="BMI"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ageR"
+        app:layout_constraintTop_toBottomOf="@+id/resultP" />
+
+
+    <TextView
+        android:id="@+id/BloodPressureR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/bp"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="BloodPressure"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiR" />
+
+    <TextView
+        android:id="@+id/GlucoseR"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/glucose"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Glucose"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BloodPressureR" />
+
+    <TextView
+        android:id="@+id/InsulinR"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/insulin"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Insulin"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/GlucoseR"
+        app:layout_constraintTop_toBottomOf="@+id/BloodPressureR" />
+
+    <TextView
+        android:id="@+id/DPFR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/dpf"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Diabetes Predigree Function"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InsulinR" />
+
+    <TextView
+        android:id="@+id/pregnanciesR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/pregn"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Pregnancies"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DPFR" />
+
+    <TextView
+        android:id="@+id/SkinThicknessR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/man"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/green"
+        android:ems="10"
+        android:hint="Skin Thickness"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregnanciesR" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
