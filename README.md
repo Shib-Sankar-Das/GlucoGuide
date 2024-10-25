@@ -1,153 +1,145 @@
-# Diaguard
+# GlucoGuide
 
-[![version](https://img.shields.io/badge/Release-3.12.2-478063.svg)](https://github.com/Faltenreich/Diaguard/releases)
-[![ci](https://github.com/Faltenreich/Diaguard/actions/workflows/ci.yml/badge.svg)](https://github.com/Faltenreich/Diaguard/actions/workflows/ci.yml)
+### Smart Healthcare Monitoring Mobile Application for Diabetic Patients
 
-<img src="./resource/image/marketing/showcase.png" width="750"> 
+<div style="display: flex; align-items: center;">
 
-Diaguard is an Android app for people with diabetes mellitus.
+<div style="display: grid; grid-template-columns: 2fr auto; align-items: center; gap: 20px;">
+    <div>
+        This Android application, designed to support diabetic patients in managing their health, integrates several essential features to monitor, visualize, and predict health metrics. This includes an AI-driven early diagnosis tool, nutrition insights, and various tools for medication tracking, lab tests, and doctor management.
+    </div>
+    <div>
+        <img src="https://github.com/user-attachments/assets/ec80e176-fad5-4c84-a502-b30810ace9a5" alt="logo" width="200">
+    </div>
+</div>
 
-It replaces the handwritten diary and helps the user to quickly and easily record, evaluate and export his blood sugar and other important data as PDF or CSV. Thanks to the clearly arranged interface, the user always has an overview of his diabetes. The app also provides information on several thousand foods including carbohydrates and other nutrients.
+---
 
-* Quickly and easily track your blood glucose, insulin, carbohydrates, HbA1c, activity, weight, pulse, blood pressure and oxygen saturation
-* Customizable units
-* Visualize your blood glucose level in a graph
-* Detailed logs of your data
-* Settings for basal rate, correction factor and meal-bolus-factor
-* Food database with thousands of entries
-* PDF and CSV export
-* Backup
-* Reminder
-* Estimated HbA1c
-* Statistics
-* Dark Mode
-* Localized in English, German, French, Spanish and Italian
+## Overview
 
-<img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="100"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="100"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="100">  <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" width="100"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="100"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.png" width="100"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/7.png" width="100"> 
+<div style="display: flex; align-items: center; gap: 20px;">
+    <div style="flex: 1;">
+        <strong>Smart Healthcare Monitoring Mobile Application</strong> provides diabetic patients with a comprehensive platform to monitor, analyze, and manage their health data. The app integrates tracking functionalities for blood glucose levels, blood pressure, insulin intake, and other critical health metrics, enabling users to manage their condition effectively. This application also features an AI-based diabetes risk predictor using the Pima Indian Diabetes dataset for preliminary assessment and offers nutrition tracking through QR/barcode scanning and image recognition.
+    </div>
+    <div>
+        <img src="https://github.com/user-attachments/assets/74433493-a645-49d2-85ae-e2957dd5cc80" alt="Smart Healthcare Monitoring Mobile Application" width="200">
+    </div>
+</div>
 
-## Distribution
 
-<a href='https://play.google.com/store/apps/details?id=com.faltenreich.diaguard'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="250"/></a><a href='https://f-droid.org/de/packages/com.faltenreich.diaguard'><img alt='Get it on F-Droid' src='https://f-droid.org/badge/get-it-on.png' width="250"/></a>
 
-## About
+The app leverages two types of databases:
+1. **Firebase** - Used for user authentication, storing user data, and handling external service integration.
+2. **Internal CSV Database** - A local storage format where patient data is secured and managed offline in CSV format, ensuring patient data confidentiality.
 
-#### History
+---
 
-Development of Diaguard started in October 2013. It was as one of several small projects of one developer who was trying to gain traction on the Android platform. This project soon evolved into a vision named Diaguard which saw its initial release in July 2014. Since then it has received many updates, much appreciated feedback from its users and a little bit of marketing with the help of direct contact and mouth to mouth propaganda. But at the end of the day every line of code has been provided by one sole developer in his spare-time. This should change in April 2020 when the decision was made to go open source.
+## Features
 
-#### Goals
+### 1. Diabetes Prediction
+- **AI-driven Diagnosis**  
+  Users can input various health metrics, such as BMI, glucose, blood pressure, and more, to receive a preliminary diabetes risk assessment based on a pre-trained model.  
+  
 
-Diaguard should help diabetics with monitoring their diabetes. It should be able to replace the handwritten diary completely and to supplement tasks like basal rate tests or carb counting. It should help diabetologists with monitoring their patients regularly and when preparing a health insurance application. 
+- **Detailed Feedback**  
+  Provides detailed explanations of each metric’s influence on diabetes risk, guiding users to understand the contributing factors.
+  ![Prediction Feedback](./screenshots/prediction_feedback.png)
 
-Diaguard's users should always be and feel in full control. All user-generated data must stay on the same device until the user explicitely decides to transfer something to another device, e.g. during an export or backup. Nothing is shared with remote services and network is only used to read data from a food database.</br>User data must not be lost. Therefor database migrations enable user data to be carried from version 1.0 to any existing and upcoming release.
+### 2. Nutrition Analysis
+- **Barcode Scanning**  
+  Users can scan packaged food items to retrieve nutritional data instantly.  
+  ![Barcode Scanning](./screenshots/barcode_scanning.png)
 
-Diaguard should be accessible to most people. Therefor its design is heavily influenced by the [Material Design Guidelines](https://material.io/design) and tested with accessibility tools like [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).
+- **Image-based Food Analysis**  
+  By capturing food images, the app retrieves nutritional values, including glycemic index, carbohydrates, proteins, and fats, for better dietary control.  
+  ![Food Image Analysis](./screenshots/food_image_analysis.png)
 
-Diaguard should only be used under the supervision of a diabetologist.</br>
-Diaguard should not be used by minors without the supervision of a parent or legal guardian.</br>
-Diaguard is not a medical app and serves no therapeutical purpose.
+### 3. Lab Tests Management
+- **Comprehensive Test Catalogue**  
+  Users can browse lab tests, understand diagnostic parameters, and compare prices to select the most suitable lab.  
+  ![Lab Test Catalogue](./screenshots/lab_test_catalogue.png)
 
-#### Business model
+- **Appointment Scheduling**  
+  In-app lab test booking, where users can select the date and time, with detailed diagnostic information for easy preparation.  
+  ![Lab Test Appointment](./screenshots/lab_test_appointment.png)
 
-There is none. 
+### 4. Medicine Ordering and Tracking
+- **Medicine Search and Purchase**  
+  Users can search for medicines, add them to a cart, and schedule delivery with a few clicks.  
+  ![Medicine Search](./screenshots/medicine_search.png)
 
-Diaguard exists for three reasons: for learning, for fun and for saying thank you. This app kickstarted the career of a professional software developer by leading through the whole software lifecycle: creating a concept, building software from scratch, publishing it to the masses and maintaining a legacy project with additions sprinkled here and there. Additionally it was and is pure fun to enhance this app and to see feedback from a helpful and thankful community. Last but not least Diaguard is a way of giving something back.
+- **Order Tracking**  
+  The app provides real-time updates on order status, with details like expected delivery date and order history.  
+  ![Order Tracking](./screenshots/order_tracking.png)
 
-For these reasons, Diaguard has been, is and will always be free of cost.
+### 5. Doctor Management
+- **Profile Management**  
+  Store multiple doctors' contact details, specialization, and clinic information, including a "Primary Doctor" flag for emergencies.  
+  ![Doctor Profile](./screenshots/doctor_profile.png)
 
-If you want to buy me a beer or support me in general, please use the donate button and be aware of my thanks.
+### 6. Health Tracker
+- **Daily Data Entry**  
+  Track daily metrics, such as blood pressure, glucose levels, and medication intake.  
+  ![Daily Data Entry](./screenshots/daily_data_entry.png)
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AM6HG633T4BWY&source=url">
- <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" width="100"/>
-</a>
+- **Graphical Visualization**  
+  View trends over time with interactive charts and graphs for easy health status tracking.  
+  ![Data Visualization](./screenshots/data_visualization.png)
 
-## Development
+- **Exporting Data**  
+  Users can export health records in CSV or PDF formats, ensuring privacy by storing sensitive data in the internal database.  
+  ![Data Export](./screenshots/data_export.png)
 
-#### Languages
+### 7. Health Dashboard
+- **Key Statistics**  
+  Displays averages, blood sugar counts, estimated HbA1c, and trends over time, with customizable views.  
+  ![Health Dashboard](./screenshots/health_dashboard.png)
 
-English is used as general language for naming things. Everything except the localization should be written in English.
+### 8. Alarms and Reminders
+- **Medication Reminders**  
+  Schedule reminders for data input and medication timing, including persistent notifications even after device reboots.  
+  ![Reminders](./screenshots/reminders.png)
 
-[Java](https://java.com/de) is used as programming language. Currently there are no plans to migrate to [Kotlin](https://kotlinlang.org) to prevent a multi-language project. A possible approach could be splitting up the monolith into multiple modules which unleashes the potential to switch language while staying consistent within a module.
+### 9. Articles & Resources
+- **RSS Feed Integration**  
+  Get the latest health articles on diabetes, nutrition, and healthy living, with search functionality by topic or date.  
+  ![Health Articles](./screenshots/health_articles.png)
 
-[SQLite](https://developer.android.com/training/data-storage/sqlite) is used as query language for the database. Object-relational mapping takes then place via [ORMLite](http://ormlite.com).
+---
 
-[XML](https://developer.android.com/guide/topics/ui/declaring-layout) is used as markup language for user interfaces. These views are then bound to Java via [View Binding](https://developer.android.com/topic/libraries/view-binding).
+## Technical Details
 
-#### Localization
+### Architecture & Components
 
-Localization takes place locally and affects following components:
+This application is structured for modularity and security, with Firebase and internal databases as the foundation for data management. 
 
-* User interfaces: localized via [Android resources](https://developer.android.com/guide/topics/resources/localization) (one [strings.xml](/app/src/main/res/values/strings.xml) per language)
-* Common food: localized via custom file import (one [food_common.csv](/app/src/main/assets/food_common.csv) for all languages)
-* Default tags: localized via custom file import (one [tags.csv](/app/src/main/assets/tags.csv) for all languages)
+#### Firebase Database
+Used for **user authentication** and securely managing user-related data that needs to be accessible across devices, Firebase ensures robust external data management for:
+- Authentication
+- User preferences
+- Synchronizing lab test data and doctor details
 
-Currently the localization process requires certain programming skills. This should and could be improved by using an external service in order to support localizations by non-developers.
+#### CSV-based Internal Database
+For **sensitive and confidential patient data**, a local CSV format database stores health metrics such as blood glucose and blood pressure readings. This ensures data remains accessible offline and maintains high privacy standards for patient confidentiality.
 
-#### Architecture
+### Major Files and Classes
 
-There are two architectural design patterns that are being used for Diaguard: [Model-View-Controller](https://en.wikipedia.org/wiki/Model%e2%80%93view%e2%80%93controller) and [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
+| Class                   | Purpose                                              |
+|-------------------------|------------------------------------------------------|
+| `PredictorActivity.java`| Handles data input and invokes the AI predictor      |
+| `NutritionActivity.java`| Manages barcode scanning and food analysis functions |
+| `LabTestActivity.java`  | Enables browsing and booking lab tests               |
+| `StoreActivity.java`    | Manages medicine search, cart, and ordering          |
+| `DoctorAdapter.java`    | Binds doctor data to RecyclerView                    |
+| `DashboardFragment.java`| Displays dashboard statistics and visualizations     |
+| `AlarmUtils.java`       | Schedules and manages reminders                      |
+| `PreferenceStore.java`  | Manages user preferences and settings                |
+| `Export.java`           | Executes health data export in PDF or CSV            |
 
-Model-View-Controller (MVC) was a widely spread design pattern in the early days of Android development until Google presented its Architecture Components in 2017 and Model-View-ViewModel (MVVM) took over. A gradual transition to MVVM is planned due to its advantages over MVC, e.g. regarding encapsulation and testability. 
+---
 
-Domain-driven design improves the structure by grouping files in features. Every feature describes one aspect of the project and should be self-contained to improve focus during development. The only exception to this rule is the shared package which contains everything that is used in multiple features (e.g. database- or networking logic).
- 
-#### Testing
+## Installation
 
-Testing takes place via [JUnit](https://junit.org) and [Espresso](https://developer.android.com/training/testing/espresso). Tests are few in number and far from perfect, since most of Diaguard has been developed in the early of days of one developer. However the decision to go open source came with a code of conduct, and instrumentation testing major features was the first step in a right direction. The goal now is to unit- and instrumentation test every new and edited feature in order to increase the quality with every commit.
-
-#### Third-party licenses
-
-This software uses following technologies with great appreciation:
-
-* [AboutLibraries](https://github.com/mikepenz/AboutLibraries)
-* [AndroidX](https://developer.android.com/jetpack/androidx)
-* [Apache Commons Text](http://commons.apache.org/proper/commons-text)
-* [App Privacy Policy Generator](https://github.com/nisrulz/app-privacy-policy-generator)
-* [BetterPickers](https://github.com/code-troopers/android-betterpickers)
-* [EventBus](https://github.com/greenrobot/EventBus)
-* [FloatingActionButton](https://github.com/Clans/FloatingActionButton)
-* [Gson](https://github.com/google/gson)
-* [Joda-Time](http://www.joda.org/joda-time)
-* [joda-time-android](https://github.com/dlew/joda-time-android)
-* [JUnit](https://junit.org)
-* [Material Components for Android](https://material.io/components)
-* [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
-* [Opencsv](http://opencsv.sf.net)
-* [Open Food Facts](http://world.openfoodfacts.org)
-* [ORMLite](http://ormlite.com)
-* [ORMLite Android](https://github.com/j256/ormlite-android)
-* [Parallax Everywhere](https://github.com/Narfss/ParallaxEverywhere)
-* [PDFjet](http://pdfjet.com)
-* [Picasso](http://square.github.io/picasso)
-* [Retrofit](https://square.github.io/retrofit)
-* [Schweizer Nährwertdatenbank](http://naehrwertdaten.ch)
-* [Shields.io](https://shields.io)
-
-These dependencies are bundled with Diaguard but under the terms of their respective license.
-
-## Legal
-
-The manufacturer of this software assumes no responsibility for the topicality, correctness, completeness or quality of the information provided. Liability claims against the manufacturer, which relate to material or immaterial nature, caused by the use or non-use of the software are excluded.
-
-#### Redistribution
-
-Additionally to the permissions, conditions and limitations of the GPLv3, the permission for redistribution must be manually requested in advance. This ensures that neither the original software or any fork will be affected negatively by terms and conditions like the [Google Play Developer Distribution Agreement](https://play.google.com/about/developer-distribution-agreement.html). If you plan to redistribute this software, please contact the maintainer at [diaguard.de@gmail.com](mailto:diaguard.de@gmail.com).
-
-#### License
-
-    Copyright (C) 2013-2024 Philipp Fahlteich
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-<img src="./resource/image/logo/logo_legacy.png" width="100">
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Shib-Sankar-Das/GlucoGuide.git
