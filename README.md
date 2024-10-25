@@ -136,8 +136,8 @@ The app leverages two types of databases:
 - **RSS Feed Integration**  
   Get the latest health articles on diabetes, nutrition, and healthy living, with search functionality by topic or date.
   <div style="display: flex; justify-content: space-around; gap: 20px;">
-    <img src="https://github.com/user-attachments/assets/d13bc57e-eeb4-4dd4-8fe2-ca661a340bcd" alt="Screenshot 1" width="400">
-    <img src="https://github.com/user-attachments/assets/5bc21154-f256-4764-8b6f-a49603252299" alt="Screenshot 2" width="400">
+    <img src="https://github.com/user-attachments/assets/d13bc57e-eeb4-4dd4-8fe2-ca661a340bcd" alt="Screenshot 1" width="200">
+    <img src="https://github.com/user-attachments/assets/5bc21154-f256-4764-8b6f-a49603252299" alt="Screenshot 2" width="200">
 </div>
 
 
